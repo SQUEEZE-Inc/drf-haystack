@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        django-version: [3.2, 4.0, 4.1]
-        python-version: [3.7, 3.8, 3.9, 3.10]
+        django-version: [3.2, '4.0', 4.1]
+        python-version: [3.7, 3.8, 3.9, '3.10']
         elastic-version: [1.7, 2.4]
     services:
       elastic:

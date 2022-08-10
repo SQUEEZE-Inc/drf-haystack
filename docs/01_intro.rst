@@ -152,7 +152,8 @@ Finally, hook up the views in your `urls.py` file.
     # urls.py
     #
 
-    from django.conf.urls import patterns, url, include
+    from django.conf.urls import patterns, include
+    from django.urls import re_path as url
     from rest_framework import routers
 
     from .views import LocationSearchView

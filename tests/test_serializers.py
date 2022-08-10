@@ -9,7 +9,8 @@ import json
 from datetime import datetime, timedelta
 
 import six
-from django.conf.urls import url, include
+from django.conf.urls import include
+from django.urls import re_path as url
 from django.core.exceptions import ImproperlyConfigured
 from django.http import QueryDict
 from django.test import TestCase, SimpleTestCase, override_settings

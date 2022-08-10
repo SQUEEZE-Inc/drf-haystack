@@ -13,7 +13,7 @@ from django.conf.urls import include
 from django.urls import re_path as url
 from django.core.exceptions import ImproperlyConfigured
 from django.http import QueryDict
-from django.test import TestCase, SimpleTestCase, override_settings
+from django.test import TestCase, override_settings
 from haystack.query import SearchQuerySet
 
 from rest_framework import serializers
@@ -650,7 +650,7 @@ class HaystackMultiSerializerTestCase(WarningTestCaseMixin, TestCase):
         )
 
 
-class TestHaystackSerializerMeta(SimpleTestCase):
+class TestHaystackSerializerMeta(TestCase):
 
     def test_abstract_not_inherited(self):
         class Base(six.with_metaclass(HaystackSerializerMeta, serializers.Serializer)):
@@ -663,7 +663,7 @@ class TestHaystackSerializerMeta(SimpleTestCase):
         self.assertRaises(ImproperlyConfigured, create_subclass)
 
 
-class TestMeta(SimpleTestCase):
+class TestMeta(TestCase):
 
     def test_inheritance(self):
         """

@@ -32,7 +32,7 @@ factory = APIRequestFactory()
 
 
 class HaystackViewSetTestCase(TestCase):
-
+    databases = '__all__'
     fixtures = ["mockperson", "mockpet"]
 
     def setUp(self):
@@ -132,7 +132,7 @@ class HaystackViewSetTestCase(TestCase):
 
 
 class HaystackViewSetPermissionsTestCase(TestCase):
-
+    databases = '__all__'
     fixtures = ["mockperson"]
 
     def setUp(self):
@@ -263,7 +263,7 @@ class HaystackViewSetPermissionsTestCase(TestCase):
 
 
 class PaginatedHaystackViewSetTestCase(TestCase):
-
+    databases = '__all__'
     fixtures = ["mockperson"]
 
     def setUp(self):

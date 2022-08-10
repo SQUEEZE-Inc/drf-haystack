@@ -8,6 +8,7 @@ from drf_haystack.utils import merge_dict
 
 
 class MergeDictTestCase(TestCase):
+    databases = '__all__'
 
     def setUp(self):
         self.dict_a = {

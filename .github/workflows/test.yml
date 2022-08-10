@@ -14,7 +14,10 @@ jobs:
         include:
           - django-version: 3.2
             python-version: 3.7
-            elastic-version: [1.7, 2.4]
+            elastic-version: 1.7
+          - django-version: 3.2
+            python-version: 3.7
+            elastic-version: 2.4
     services:
       elastic:
         image: elasticsearch:${{ matrix.elastic-version }}

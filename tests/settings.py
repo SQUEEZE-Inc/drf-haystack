@@ -122,6 +122,6 @@ try:
 except ImportError as e:
     del HAYSTACK_CONNECTIONS['default']  # This will intentionally cause everything to break!
 
-if (sys.version_info.major, sys.version_info.minor) == (3, 10):
+if sys.version_info.major == 3 and sys.version_info.minor > 9:
     import collections
     collections.Callable = collections.abc.Callable

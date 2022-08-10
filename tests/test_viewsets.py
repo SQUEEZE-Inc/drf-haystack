@@ -8,7 +8,7 @@ from __future__ import absolute_import, unicode_literals
 import json
 from unittest import skipIf
 
-from django.test import TestCase
+from django.test import TestCase, SimpleTestCase
 from django.contrib.auth.models import User
 
 from haystack.query import SearchQuerySet
@@ -31,7 +31,7 @@ from .mockapp.search_indexes import MockPersonIndex, MockPetIndex
 factory = APIRequestFactory()
 
 
-class HaystackViewSetTestCase(TestCase):
+class HaystackViewSetTestCase(SimpleTestCase):
     databases = '__all__'
     fixtures = ["mockperson", "mockpet"]
 
@@ -131,7 +131,7 @@ class HaystackViewSetTestCase(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 
-class HaystackViewSetPermissionsTestCase(TestCase):
+class HaystackViewSetPermissionsTestCase(SimpleTestCase):
     databases = '__all__'
     fixtures = ["mockperson"]
 
@@ -262,7 +262,7 @@ class HaystackViewSetPermissionsTestCase(TestCase):
                                          "not have `.model` or `.queryset` property.")
 
 
-class PaginatedHaystackViewSetTestCase(TestCase):
+class PaginatedHaystackViewSetTestCase(SimpleTestCase):
     databases = '__all__'
     fixtures = ["mockperson"]
 

@@ -47,6 +47,24 @@ jobs:
           - django-version: '4.1'
             python-version: '3.10'
             elastic-version: 2.4
+          - django-version: '4.2'
+            python-version: 3.9
+            elastic-version: 1.7
+          - django-version: '4.2'
+            python-version: 3.9
+            elastic-version: 2.4
+          - django-version: '4.2'
+            python-version: 3.9
+            elastic-version: 1.7
+          - django-version: '4.2'
+            python-version: 3.9
+            elastic-version: 2.4
+          - django-version: '4.2'
+            python-version: '3.10'
+            elastic-version: 1.7
+          - django-version: '4.2'
+            python-version: '3.10'
+            elastic-version: 2.4
     services:
       elastic:
         image: elasticsearch:${{ matrix.elastic-version }}

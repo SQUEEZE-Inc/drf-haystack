@@ -33,7 +33,7 @@ Installation
 Supported features
 ------------------
 We aim to support most features Haystack does (or at least those which can be used in a REST API).
-Currently we support:
+Currently, we support:
 
 - Autocomplete
 - Boost (Experimental)
@@ -49,7 +49,7 @@ Show me more!
 from drf_haystack.serializers import HaystackSerializer
 from drf_haystack.viewsets import HaystackViewSet
 
-from myapp.search_indexes import PersonIndex  # BYOI™ (Bring Your Own Index)
+from myapp.search_indexes import PersonIndex  # You would define this Index normally as per Haystack's documentation
 
 # Serializer
 class PersonSearchSerializer(HaystackSerializer):

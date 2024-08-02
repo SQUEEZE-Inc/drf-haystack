@@ -20,7 +20,7 @@ Supported versions
 ------------------
 
 - Python 3.7 and above
-- Django >=2.2,<=5.0
+- Django >=2.2,<=5.0.7
 - Haystack 2.8, 3.2
 - Django REST Framework >=3.7.0,<=3.13
 - elasticsearch >=2.0.0,<=8.3.3,
